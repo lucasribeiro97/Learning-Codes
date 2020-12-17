@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o seu pais?</title>
+</head>
+<body>
+    <h1>Qual o seu país?</h1>
+    Digite seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick = 'mostrar()'>
+    <div id = 'res'>
+    </div>
+    <script>
+        function mostrar () {
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = (txtp.value)
+            res.innerHTML = `<p>Seu país é <strong>${pais}</strong>!`
+            if (pais === 'Brasil') {
+                res.innerHTML += '<p> Você é <strong>Brasileiro!</strong></p>'
+            } else {
+                res.innerHTML += '<p> Você é <strong>estrangeiro!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
